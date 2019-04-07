@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <a href="./" class="header__logo">
-        <img class="header__logo-image" width="86" height="35" src="http://placehold.it/86x35" alt="Магазин вещей ручной работы Мишка">
-      </a>
-      <button class="header__menu-button" type="button">
-        <span class="visualy-hidden">Открыть меню</span>
-      </button>
+      <div class="header__logo-wraper">
+        <a href="./index.html" class="header__logo">
+          <img class="header__logo-image" width="86" height="35" src="http://placehold.it/86x35" alt="Магазин вещей ручной работы Мишка">
+        </a>
+        <button class="header__menu-button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
       <nav class="header__menu">
         <ul class="menu">
           <li class="menu__item">
@@ -23,26 +27,39 @@
         </ul>
         <ul class="menu">
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link--search">Поиск по сайту</a>
+            <a href="#" class="menu__link">
+              <img class="menu__link-icon" width="21" height="21" src="http://placehold.it/21x21" alt="Поиск">
+              <span>Поиск по сайту</span>
+            </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link--basket">Корзина: пока пуста</a>
+            <a href="#" class="menu__link">
+              <img class="menu__link-icon" width="21" height="21" src="http://placehold.it/21x21" alt="Корзина">
+              <span>Корзина: пока пуста</span>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
     <footer class="footer">
       <ul class="footer__social-block">
-        <li><a href="#" class="footer__social-link footer__social-link--instagram"><span class="visualy-hidden">Наша страница в Instagram</span></a></li>
-        <li><a href="#" class="footer__social-link footer__social-link--facebook"><span class="visualy-hidden">Наша страница на FaceBook</span></a></li>
-        <li><a href="#" class="footer__social-link footer__social-link--twitter"><span class="visualy-hidden">Наша страница в Twitter</span></a></li>
+        <li><a href="#" class="footer__social-link">
+          <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Instagram">
+          <span class="visually-hidden">Наша страница в Instagram</span>
+        </a></li>
+        <li><a href="#" class="footer__social-link">
+          <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Facebook">
+          <span class="visually-hidden">Наша страница на Facebook</span>
+        </a></li>
+        <li><a href="#" class="footer__social-link">
+          <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Twitter">
+          <span class="visually-hidden">Наша страница в Twitter</span>
+        </a></li>
       </ul>
-      <div class="footer__copyright">
-        <a href="#" class="footer__copyright-link">
-          <span class="footer__copyright-text">Разработано</span>
-          <img width="27" height="34" src="http://placehold.it/27x34" alt="HTML Academy">
-        </a>
-      </div>
+      <a href="#" class="footer__copyright">
+        <span class="footer__copyright-text">Разработано</span>
+        <img width="27" height="34" src="http://placehold.it/27x34" alt="HTML Academy">
+      </a>
     </footer>
   </body>
 </html>
