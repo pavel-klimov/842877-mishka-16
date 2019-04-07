@@ -1,0 +1,36 @@
+.footer {
+  background-color: #f1f1f1;
+  padding: 0 30px;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__social-link {
+  display: flex;
+  margin: 15px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 1px 0 #e5e5e5;
+  min-height: 80px;
+  color: #000000;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.footer__copyright-text {
+  padding-right: 30px;
+}

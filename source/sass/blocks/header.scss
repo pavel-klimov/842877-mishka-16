@@ -1,0 +1,27 @@
+.header {
+  position: relative;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  min-height: 79px;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}
+
+.header__logo-image {
+  display: flex;
+  padding: 22px;
+}
+
+.header__menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 79px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
