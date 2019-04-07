@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <div class="header__logo-wraper">
-        <a href="./index.html" class="header__logo">
+      <div class="header__logo">
+        <a href="./index.html" class="header__logo-link">
           <img class="header__logo-image" width="86" height="35" src="http://placehold.it/86x35" alt="Магазин вещей ручной работы Мишка">
         </a>
-        <button class="header__menu-button" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <button class="header__menu-button" type="button" aria-label="Открыть меню"></button>
       </div>
       <nav class="header__menu">
         <ul class="menu">
@@ -43,55 +41,57 @@
     </header>
     <main>
       <h1 class="visually-hidden">Сайт магазина вещей ручной работы Мишка</h1>
-      <section class="intro-sections">
+      <section class="intro">
         <h2>Милые штуки ручной работы для дома</h2>
-        <a class="intro-sections__link">Предметы интерьера</a>
-        <a class="intro-sections__link">Детские игрушки</a>
+        <ul class="intro__navigation">
+          <li><a class="intro__link">Предметы интерьера</a></li>
+          <li><a class="intro__link">Детские игрушки</a></li>
+        </ul>
       </section>
-      <section class="intro-catalog">
-        <h2 class="intro-catalog__title">Вязаные корзинки</h2>
-        <div class="intro-catalog__category">Товары недели</div>
-        <p class="intro-catalog__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="intro-catalog__specifications">
-          <tr class="intro-catalog__feature">
-            <td class="intro-catalog__feature-name">Цвет:</td>
-            <td class="intro-catalog__feature-value">«Тиффани»/серый</td>
+      <section class="promo">
+        <h2 class="promo__title">Вязаные корзинки</h2>
+        <div class="promo__label">Товары недели</div>
+        <p class="promo__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="promo__specifications">
+          <tr class="promo__feature">
+            <td class="promo__feature-name">Цвет:</td>
+            <td class="promo__feature-value">«Тиффани»/серый</td>
           </tr>
-          <tr class="intro-catalog__feature">
-            <td class="intro-catalog__feature-name">Диаметр:</td>
-            <td class="intro-catalog__feature-value">25 см</td>
+          <tr class="promo__feature">
+            <td class="promo__feature-name">Диаметр:</td>
+            <td class="promo__feature-value">25 см</td>
           </tr>
-          <tr class="intro-catalog__feature">
-            <td class="intro-catalog__feature-name">Высота:</td>
-            <td class="intro-catalog__feature-value">15 см</td>
+          <tr class="promo__feature">
+            <td class="promo__feature-name">Высота:</td>
+            <td class="promo__feature-value">15 см</td>
           </tr>
         </table>
-        <img class="intro-catalog__image" width="260" height="315" src="http://placehold.it/260x315" alt="Три вязаные корзинки">
-        <p class="intro-catalog__price">Цена: 990 руб.</p>
+        <img class="promo__image" width="260" height="315" src="http://placehold.it/260x315" alt="Три вязаные корзинки">
+        <p class="promo__price">Цена: 990 руб.</p>
         <button class="button" type="button">Заказать</button>
       </section>
-      <section class="about-us">
-        <h2 class="about-us__title">Коротко о нас:</h2>
-        <div class="about-us__points">
-          <p class="about-us__item about-us__item--eco">
+      <section class="about">
+        <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__points">
+          <li class="about__item about__item--eco">
             Экологически чистые материалы
-          </p>
-          <p class="about-us__item about-us__item--price">
+          </li>
+          <li class="about__item about__item--price">
             Скандинавский стиль по российской цене
-          </p>
-          <p class="about-us__item about-us__item--likes">
+          </li>
+          <li class="about__item about__item--likes">
             Увеличивает лайки на фотографиях
-          </p>
-          <p class="about-us__item about-us__item--hand-made">
+          </li>
+          <li class="about__item about__item--hand-made">
               Связано вручную с любовью и умилением
-          </p>
-          <p class="about-us__item about-us__item--manufacture">
+          </li>
+          <li class="about__item about__item--manufacture">
               Связано вручную с любовью и умилением
-          </p>
-          <p class="about-us__item--gift-wrap">
+          </li>
+          <li class="about__item--gift-wrap">
               Поставляется в подарочной упаковке
-          </p>
-        </div>
+          </li>
+        </ul>
       </section>
       <section class="feedback">
         <h2 class="feedback__title">Отзывы</h2>
@@ -107,12 +107,8 @@
           </div>
         </div>
         <div class="feedback__slider-controls">
-          <button class="feedback__slider-button feedback__slider-button--back" type="button">
-            <span class="visually-hidden">Назад</span>
-          </button>
-          <button class="feedback__slider-button feedback__slider-button--next" type="button">
-            <span class="visually-hidden">Дальше</span>
-          </button>
+          <button class="feedback__slider-button feedback__slider-button--back" type="button" aria-label="Назад"></button>
+          <button class="feedback__slider-button feedback__slider-button--next" type="button" aria-label="Дальше"></button>
         </div>
         <button class="button" type="button">Написать</button>
       </section>
@@ -131,18 +127,15 @@
       </section>
     </main>
     <footer class="footer">
-      <ul class="footer__social-block">
-        <li><a href="#" class="footer__social-link">
+      <ul class="footer__social">
+        <li><a href="#" class="footer__social-link" aria-label="Наша страница в Instagram">
           <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Instagram">
-          <span class="visually-hidden">Наша страница в Instagram</span>
         </a></li>
-        <li><a href="#" class="footer__social-link">
+        <li><a href="#" class="footer__social-link" aria-label="Наша страница на Facebook">
           <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Facebook">
-          <span class="visually-hidden">Наша страница на Facebook</span>
         </a></li>
-        <li><a href="#" class="footer__social-link">
+        <li><a href="#" class="footer__social-link" aria-label="Наша страница в Twitter">
           <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Twitter">
-          <span class="visually-hidden">Наша страница в Twitter</span>
         </a></li>
       </ul>
       <a href="#" class="footer__copyright">

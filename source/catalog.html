@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <div class="header__logo-wraper">
-        <a href="./index.html" class="header__logo">
+      <div class="header__logo">
+        <a href="./index.html" class="header__logo-link">
           <img class="header__logo-image" width="86" height="35" src="http://placehold.it/86x35" alt="Магазин вещей ручной работы Мишка">
         </a>
-        <button class="header__menu-button" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <button class="header__menu-button" type="button" aria-label="Открыть меню"></button>
       </div>
       <nav class="header__menu">
         <ul class="menu">
@@ -52,7 +50,7 @@
           </a>
           <div class="catalog-item__for-buy">
             <p class="catalog-item__price">1 200 руб.</p>
-            <button class="catalog-item__buy-button"><span class="visually-hidden">Добавить в корзину</span></button>
+            <button class="catalog-item__buy-button" aria-label="Добавить в корзину"></button>
           </div>
         </section>
         <section class="catalog-item">
@@ -63,7 +61,7 @@
           </a>
           <div class="catalog-item__for-buy">
             <p class="catalog-item__price">690 руб.</p>
-            <button class="catalog-item__buy-button"><span class="visually-hidden">Добавить в корзину</span></button>
+            <button class="catalog-item__buy-button" aria-label="Добавить в корзину"></button>
           </div>
         </section>
         <section class="catalog-item">
@@ -74,24 +72,21 @@
           </a>
           <div class="catalog-item__for-buy">
             <p class="catalog-item__price">1 500 руб.</p>
-            <button class="catalog-item__buy-button"><span class="visually-hidden">Добавить в корзину</span></button>
+            <button class="catalog-item__buy-button" aria-label="Добавить в корзину"></button>
           </div>
         </section>
       </div>
     </main>
     <footer class="footer">
-      <ul class="footer__social-block">
-        <li><a href="#" class="footer__social-link">
+      <ul class="footer__social">
+        <li><a href="#" class="footer__social-link" aria-label="Наша страница в Instagram">
           <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Instagram">
-          <span class="visually-hidden">Наша страница в Instagram</span>
         </a></li>
-        <li><a href="#" class="footer__social-link">
+        <li><a href="#" class="footer__social-link" aria-label="Наша страница на Facebook">
           <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Facebook">
-          <span class="visually-hidden">Наша страница на Facebook</span>
         </a></li>
-        <li><a href="#" class="footer__social-link">
+        <li><a href="#" class="footer__social-link" aria-label="Наша страница в Twitter">
           <img class="footer__social-logo" width="28" height="28" src="http://placehold.it/28x28" alt="Twitter">
-          <span class="visually-hidden">Наша страница в Twitter</span>
         </a></li>
       </ul>
       <a href="#" class="footer__copyright">
