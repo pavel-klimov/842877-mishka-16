@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   min-height: 79px;
-  padding-left: 76px;
+  padding-left: 75px;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   color: #000000;
   font-size: 17px;
@@ -31,5 +31,6 @@
 
 .menu__link-icon {
   position: absolute;
-  margin-left: -48px;
+  margin-left: -44px;
+  opacity: 0.2;
 }
