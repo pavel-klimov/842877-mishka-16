@@ -1,0 +1,60 @@
+.about {
+  padding: 27px 30px 42px;
+}
+
+.about__title {
+  margin: 0 0 0 -2px;
+  padding-bottom: 23px;
+  color: #000000;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.about__points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.about__item {
+  display: flex;
+  flex-direction: column;
+  padding: 63px 0 20px;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  background-repeat: no-repeat;
+}
+
+.about__item--eco {
+  background-image: url(../../img/icon-feature-flower.svg);
+  background-position: 8px 9px;
+}
+
+.about__item--price {
+  background-image: url(../../img/icon-feature-money.svg);
+  background-position: 1px 10px;
+}
+
+.about__item--likes {
+  background-image: url(../../img/icon-feature-heart.svg);
+  background-position: 8px 14px;
+}
+
+.about__item--hand-made {
+  background-image: url(../../img/icon-feature-ball.svg);
+  background-position: 4px 11px;
+}
+
+.about__item--manufacture {
+  background-image: url(../../img/icon-feature-rocket.svg);
+  background-position: 0px 13px;
+  margin-left: -5px;
+  padding-left: 5px;
+}
+
+.about__item--gift-wrap {
+  background-image: url(../../img/icon-feature-gift.svg);
+  background-position: 4px 11px;
+}
