@@ -15,7 +15,12 @@
 
 .footer__social-link {
   display: flex;
+  width: 28px;
   margin: 15px;
+}
+
+.footer__social-link--facebook {
+  transform: translateX(4px);
 }
 
 .footer__copyright {
@@ -33,4 +38,5 @@
 
 .footer__copyright-text {
   padding-right: 30px;
+  margin-bottom: 6px;
 }
