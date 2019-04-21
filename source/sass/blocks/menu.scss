@@ -1,0 +1,36 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 79px;
+  padding-left: 75px;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.menu__link-icon {
+  position: absolute;
+  margin-left: -44px;
+  opacity: 0.2;
+}
