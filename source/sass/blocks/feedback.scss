@@ -10,7 +10,7 @@
     height: 6px;
     left: 0;
     bottom: 0;
-    background: url("../../img/bg-zigzag-line.svg") repeat-x bottom;
+    background: url("../img/bg-zigzag-line.svg") repeat-x bottom;
     background-size: contain;
   }
 }
@@ -90,9 +90,9 @@
 }
 
 .feedback__slider-button--back::after {
-  background-image: url("../../img/icon-left-arrow.svg");
+  background-image: url("../img/icon-left-arrow.svg");
 }
 
 .feedback__slider-button--next::after {
-  background-image: url("../../img/icon-right-arrow.svg");
+  background-image: url("../img/icon-right-arrow.svg");
 }
