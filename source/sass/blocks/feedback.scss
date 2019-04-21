@@ -1,16 +1,16 @@
 .feedback {
   position: relative;
-  padding: 0px 30px 50px;
+  padding: 0 30px 50px;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;
     height: 6px;
     left: 0;
     bottom: 0;
-    background: url(../../img/bg-zigzag-line.svg) repeat-x bottom;
+    background: url("../../img/bg-zigzag-line.svg") repeat-x bottom;
     background-size: contain;
   }
 }
@@ -68,7 +68,7 @@
   background: none;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -90,9 +90,9 @@
 }
 
 .feedback__slider-button--back::after {
-  background-image: url(../../img/icon-left-arrow.svg);
+  background-image: url("../../img/icon-left-arrow.svg");
 }
 
 .feedback__slider-button--next::after {
-  background-image: url(../../img/icon-right-arrow.svg);
+  background-image: url("../../img/icon-right-arrow.svg");
 }
