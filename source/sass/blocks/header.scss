@@ -25,6 +25,12 @@
   margin-left: -2px;
 }
 
+.header__menu {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
 .header__menu-button {
   position: absolute;
   top: 0;
@@ -39,15 +45,17 @@
   background-repeat: no-repeat;
   background-size: 21px;
   background-position: center;
-}
-
-.header__menu {
-  display: none;
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .header__menu--no-js,
 .header__menu--open {
   display: block;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .header__menu-button--no-js {
@@ -56,4 +64,17 @@
 
 .header__menu-button--open {
   background-image: url("../img/icon-menu-close.svg");
+}
+
+.header__menu-group {
+  display: none;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.header__menu--open .header__menu-group {
+  display: flex;
 }

@@ -11,14 +11,14 @@
   <body>
     <div class="wraper">
       <header class="header">
-        <div class="header__logo">
-          <a href="index.html" class="header__logo-link">
-            <img class="header__logo-image" width="86" height="35" src="img/logo-mobile.svg" alt="Магазин вещей ручной работы Мишка">
-          </a>
-          <button class="header__menu-button header__menu-button--no-js" type="button" aria-label="Открыть меню"></button>
-        </div>
         <nav class="header__menu header__menu--no-js">
-          <ul class="menu">
+          <div class="header__logo">
+            <a href="index.html" class="header__logo-link">
+              <img class="header__logo-image" width="86" height="35" src="img/logo-mobile.svg" alt="Магазин вещей ручной работы Мишка">
+            </a>
+            <button class="header__menu-button header__menu-button--no-js" type="button" aria-label="Открыть меню"></button>
+          </div>
+          <ul class="header__menu-group menu">
             <li class="menu__item">
               <a class="menu__link">Каталог товаров</a>
             </li>
@@ -26,7 +26,7 @@
               <a href="form.html" class="menu__link">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="menu">
+          <ul class="header__menu-group menu">
             <li class="menu__item">
               <a href="#" class="menu__link">
                 <img class="menu__link-icon" width="18" height="18" src="img/icon-search.svg" alt="Поиск">
