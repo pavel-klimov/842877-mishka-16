@@ -69,7 +69,11 @@
               <td class="promo__feature-value">15 см</td>
             </tr>
           </table>
-          <img class="promo__image" width="260" height="315" src="img/triple-set-mobile@1x.jpg" alt="Три вязаные корзинки">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@1x.jpg 2x">
+            <source media="(min-width: 768px)"  srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="promo__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 1x, img/triple-set-mobile@2x.jpg 2x" alt="Три вязаные корзинки">
+          </picture>
           <p class="promo__price">Цена: 990 руб.</p>
           <button class="button" type="button">Заказать</button>
         </section>
@@ -129,7 +133,11 @@
             </div>
           </div>
           <div class="contacts__map">
-            <img class="contacts__map-image" width="320" height="457" src="img/map-mobile@1x.jpg" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"  srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+            </picture>
           </div>
           <button class="button" type="button">Напишите нам</button>
         </section>
