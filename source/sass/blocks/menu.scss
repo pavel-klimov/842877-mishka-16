@@ -44,6 +44,12 @@
   }
 }
 
+.menu--main-group .menu__item:first-child {
+  @media (min-width: 1150px) {
+    box-shadow: none;
+  }
+}
+
 .menu--extra-group .menu__item {
   @media (min-width: 1150px) {
     box-shadow: none;
