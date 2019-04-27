@@ -9,16 +9,30 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div style="display: none;">
+      <svg>
+        <symbol id="icon-search" viewBox="-.8 -.8 17.6 17.6">
+          <path d="M16.5 15L13 11.4A7.7 7.7 0 0 0 6.9-.8a7.7 7.7 0 1 0 4.6 13.9l3.4 3.4c.2.2.4.3.8.3.6 0 1.1-.5 1.1-1.1 0-.2 0-.5-.3-.8zM1.4 6.8a5.5 5.5 0 1 1 11 0 5.5 5.5 0 0 1-11 0z"/>
+        </symbol>
+        <symbol id="icon-cart" viewBox="264.2 371 20.3 18.8">
+          <path d="M283.8 378.2h-3.2l-3.4-6.8a.7.7 0 1 0-1.3.6l3 6.2h-9.1l3-6.2a.7.7 0 0 0-1.3-.6l-3.4 6.8H265a.8.8 0 0 0 0 1.5h.1l.9 3c-.2.1-.3.3-.3.6 0 .4.3.7.7.7l1.6 5.8h12.7l1.7-5.8c.3 0 .7-.3.7-.7 0-.3-.2-.5-.4-.6l.9-3h.2a.8.8 0 1 0 0-1.5zm-4.2 10.1H269L268 384h12.9l-1.2 4.3zm1.6-5.8h-13.7l-.8-2.8H282l-.8 2.8z"/>
+        </symbol>
+      </svg>
+    </div>
     <div class="wraper">
       <header class="header">
         <nav class="header__menu header__menu--no-js">
           <div class="header__logo">
             <a class="header__logo-link">
-              <img class="header__logo-image" width="86" height="35" src="img/logo-mobile.svg" alt="Магазин вещей ручной работы Мишка">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="header__logo-image" width="86" height="35" src="img/logo-mobile.svg" alt="Магазин вещей ручной работы Мишка">
+              </picture>
             </a>
             <button class="header__menu-button header__menu-button--no-js" type="button" aria-label="Открыть меню"></button>
           </div>
-          <ul class="header__menu-group menu">
+          <ul class="header__menu-group menu menu--main-group">
             <li class="menu__item">
               <a href="catalog.html" class="menu__link">Каталог товаров</a>
             </li>
@@ -28,19 +42,32 @@
           </ul>
           <ul class="header__menu-group menu">
             <li class="menu__item">
-              <a href="#" class="menu__link">
-                <img class="menu__link-icon" width="18" height="18" src="img/icon-search.svg" alt="Поиск">
+              <a href="#" class="menu__link menu__link--search">
+                <svg class="menu__link-icon" width="18" height="18"><use xlink:href="#icon-search"></use></svg>
                 <span>Поиск по сайту</span>
               </a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
-                <img class="menu__link-icon" width="18" height="18" src="img/icon-cart.svg" alt="Корзина">
+                <svg class="menu__link-icon" width="20" height="18"><use xlink:href="#icon-cart"></use></svg>
                 <span>Корзина: пока пуста</span>
               </a>
             </li>
           </ul>
+          <ul class="header__menu-group menu menu--extra-group">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                Новые поступления
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                Распродажа
+              </a>
+            </li>
+          </ul>
         </nav>
+        <div class="header__promo">Бесплатная доставка по России</div>
       </header>
       <main>
         <h1 class="visually-hidden">Сайт магазина вещей ручной работы Мишка</h1>
