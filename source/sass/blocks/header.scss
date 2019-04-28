@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  z-index: 1;
 }
 
 .header__logo {
@@ -9,6 +10,7 @@
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   @media (min-width: 768px) {
     padding: 0 35px;
+    box-shadow: none;
   }
 }
 

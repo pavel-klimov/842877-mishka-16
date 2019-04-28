@@ -7,6 +7,11 @@
     <title>HTML Academy: Мишка</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+      </script>
+      <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display: none;">
@@ -79,30 +84,38 @@
           </ul>
         </section>
         <section class="promo">
-          <h2 class="promo__title">Вязаные корзинки</h2>
-          <div class="promo__label">Товары недели</div>
-          <p class="promo__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="promo__specifications">
-            <tr class="promo__feature">
-              <td class="promo__feature-name">Цвет:</td>
-              <td class="promo__feature-value">«Тиффани»/серый</td>
-            </tr>
-            <tr class="promo__feature">
-              <td class="promo__feature-name">Диаметр:</td>
-              <td class="promo__feature-value">25 см</td>
-            </tr>
-            <tr class="promo__feature">
-              <td class="promo__feature-name">Высота:</td>
-              <td class="promo__feature-value">15 см</td>
-            </tr>
-          </table>
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@1x.jpg 2x">
-            <source media="(min-width: 768px)"  srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img class="promo__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 1x, img/triple-set-mobile@2x.jpg 2x" alt="Три вязаные корзинки">
-          </picture>
-          <p class="promo__price">Цена: 990 руб.</p>
-          <button class="button" type="button">Заказать</button>
+          <div class="promo__header">
+            <h2 class="promo__title">Вязаные корзинки</h2>
+            <div class="promo__label">Товар недели</div>
+          </div>
+          <div class="promo__content">
+            <p class="promo__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="promo__specifications">
+              <tr class="promo__feature-header">
+                <th class="promo__feature-name">Параметр</th>
+                <th class="promo__feature-value">Значение</th>
+              </tr>
+              <tr class="promo__feature">
+                <td class="promo__feature-name">Цвет:</td>
+                <td class="promo__feature-value">«Тиффани»/серый</td>
+              </tr>
+              <tr class="promo__feature">
+                <td class="promo__feature-name">Диаметр:</td>
+                <td class="promo__feature-value">25 см</td>
+              </tr>
+              <tr class="promo__feature">
+                <td class="promo__feature-name">Высота:</td>
+                <td class="promo__feature-value">15 см</td>
+              </tr>
+            </table>
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@1x.jpg 2x">
+              <source media="(min-width: 768px)"  srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img class="promo__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 1x, img/triple-set-mobile@2x.jpg 2x" alt="Три вязаные корзинки">
+            </picture>
+            <p class="promo__price">Цена: 990 руб.</p>
+            <button class="button" type="button">Заказать</button>
+          </div>
         </section>
         <section class="about">
           <h2 class="about__title">Коротко о нас:</h2>
@@ -132,7 +145,7 @@
           <div class="feedback__slider">
             <div class="feedback__item">
               <p class="feedback__text">
-                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
               <div class="feedback__author">
                 <p class="feedback__author-name">Анастасия Красильникова</p>
@@ -144,7 +157,7 @@
             <button class="feedback__slider-button feedback__slider-button--back" type="button" aria-label="Назад"></button>
             <button class="feedback__slider-button feedback__slider-button--next" type="button" aria-label="Дальше"></button>
           </div>
-          <button class="button" type="button">Написать</button>
+          <button class="button feedback__button" type="button">Написать</button>
         </section>
         <section class="contacts">
           <h2 class="contacts__title">Контакты</h2>
