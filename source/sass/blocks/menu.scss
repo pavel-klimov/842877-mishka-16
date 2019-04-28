@@ -21,6 +21,7 @@
 
 .menu.menu--extra-group {
   display: none;
+
   @media (min-width: 1150px) {
     display: flex;
     max-width: 60%;
@@ -33,6 +34,7 @@
 
 .menu__item {
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
   @media (min-width: 768px) {
     box-shadow: -1px 0 0 #ececec;
   }
@@ -137,11 +139,12 @@
   margin-left: -44px;
   fill: #000000;
   opacity: 0.2;
+
   @media (min-width: 768px) {
     position: static;
     margin-left: -35px;
     padding: 0 32px;
-    }
+  }
 }
 
 .menu__link--search .menu__link-icon {

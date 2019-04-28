@@ -1,9 +1,11 @@
 .wraper {
   max-width: 320px;
   margin: 0 auto;
+
   @media (min-width: 768px) {
     max-width: 768px;
   }
+
   @media (min-width: 1150px) {
     max-width: 1150px;
   }
