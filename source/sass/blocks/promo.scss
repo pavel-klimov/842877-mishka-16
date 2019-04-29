@@ -1,6 +1,5 @@
 .promo {
   position: relative;
-  padding: 12px 30px 42px;
 
   &::after {
     @include psevdo-line-element();
@@ -17,8 +16,14 @@
     @media (min-width: 1150px) {
       height: 23px;
       background-size: 1050px 23px;
+      background-repeat: no-repeat;
+      background-position-x: center;
     }
   }
+}
+
+.promo__wraper {
+  padding: 12px 30px 42px;
 
   @media (min-width: 768px) {
     padding-bottom: 69px;
@@ -148,12 +153,15 @@
   background-color: #ececec;
 
   @media (min-width: 768px) {
-    width: 100%;
-    height: auto;
     position: absolute;
     right: 0;
     bottom: 0;
     transform: translateX(100%);
+  }
+
+  @media (min-width: 1150px) {
+    width: 100%;
+    height: auto;
   }
 }
 

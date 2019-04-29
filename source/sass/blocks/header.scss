@@ -1,6 +1,11 @@
 .header {
   position: relative;
   z-index: 1;
+  box-shadow: 0 1px 0 #ececec;
+}
+
+.header__wraper {
+  position: relative;
 }
 
 .header__logo {
@@ -55,7 +60,6 @@
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
-    box-shadow: 0 1px 0 #ececec;
   }
 }
 

@@ -1,4 +1,4 @@
-.about {
+.about__wraper {
   padding: 27px 30px 35px;
 
   @media (min-width: 768px) {
@@ -8,7 +8,7 @@
   @media (min-width: 1150px) {
     max-width: 700px;
     margin: 0 auto;
-    padding: 59px 50px 42px;
+    padding: 59px 0px 42px;
   }
 }
 
