@@ -30,7 +30,9 @@
       height: 81px;
       top: -15px;
       right: 3px;
-      background: url("../img/icon-flag.svg") center no-repeat;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: repeat-x;
+      background-position: center;
     }
 
     @media (min-width: 1150px) {

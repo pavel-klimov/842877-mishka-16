@@ -10,3 +10,14 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@mixin psevdo-line-element() {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  background-size: contain;
+}

@@ -3,17 +3,10 @@
   padding: 0 30px 50px;
 
   &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
+    @include psevdo-line-element();
     height: 6px;
-    left: 0;
     bottom: 0;
-    background: url("../img/bg-zigzag-line.svg");
-    background-position: bottom;
-    background-repeat: repeat-x;
-    background-size: contain;
+    background-image: url("../img/bg-zigzag-line.svg");
 
     @media (min-width: 768px) {
       height: 17px;

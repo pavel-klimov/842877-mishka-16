@@ -11,15 +11,10 @@
 
   &::after {
     @media (min-width: 768px) {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
+      @include psevdo-line-element();
       height: 24px;
-      left: 0;
       bottom: -1px;
-      background: url("../img/bg-zigzag-fill.svg") repeat-x bottom;
-      background-size: contain;
+      background-image: url("../img/bg-zigzag-fill.svg");
     }
 
     @media (min-width: 1150px) {
