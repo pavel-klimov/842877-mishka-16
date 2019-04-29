@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  padding: 27px 30px 42px;
+  padding: 12px 30px 42px;
 
   &::after {
     content: "";
@@ -30,8 +30,7 @@
   }
 
   @media (min-width: 1150px) {
-    padding: 105px 0 96px;
-    margin: 0 50px;
+    padding: 90px 50px 96px;
   }
 }
 
@@ -124,16 +123,7 @@
 }
 
 .promo__feature-header {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  @include visually-hidden();
 }
 
 .promo__feature {

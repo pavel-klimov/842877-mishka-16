@@ -10,7 +10,9 @@
     height: 6px;
     left: 0;
     bottom: 0;
-    background: url("../img/bg-zigzag-line.svg") repeat-x bottom;
+    background: url("../img/bg-zigzag-line.svg");
+    background-position: bottom;
+    background-repeat: repeat-x;
     background-size: contain;
 
     @media (min-width: 768px) {
@@ -28,7 +30,10 @@
   @media (min-width: 768px) {
     position: relative;
     padding: 77px 45px 102px;
-    background: url("../img/review@1x.jpg") top left no-repeat;
+    background-image: url("../img/review@1x.jpg");
+    background-position-x: 50px;
+    background-position-y: top;
+    background-repeat: no-repeat;
     background-size: 350px 457px;
   }
 
@@ -37,8 +42,8 @@
   }
 
   @media (min-width: 1150px) {
-    padding: 70px 100px 155px 171px;
-    margin: 0 50px;
+    padding: 70px 150px 155px 221px;
+    box-sizing: border-box;
   }
 }
 

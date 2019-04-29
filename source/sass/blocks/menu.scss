@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  order: 1;
 }
 
 .menu--main-group {
@@ -15,7 +14,7 @@
   }
 
   @media (min-width: 1150px) {
-    order: 0;
+    order: -1;
   }
 }
 
@@ -120,16 +119,7 @@
 
 .menu__link--search span {
   @media (min-width: 768px) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    @include visually-hidden();
   }
 }
 

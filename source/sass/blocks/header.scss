@@ -5,13 +5,18 @@
 
 .header__logo {
   display: flex;
-  order: 1;
   min-height: 79px;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  margin-left: -2px;
 
   @media (min-width: 768px) {
     padding: 0 35px;
     box-shadow: none;
+    margin-bottom: -6px;
+  }
+
+  @media (min-width: 1150px) {
+    margin-right: 59px;
   }
 }
 
@@ -32,18 +37,15 @@
 .header__logo-image {
   width: 86px;
   height: 35px;
-  margin-left: -2px;
 
   @media (min-width: 768px) {
     width: 113px;
     height: 46px;
-    margin-bottom: -6px;
   }
 
   @media (min-width: 1150px) {
     width: 149px;
     height: 72px;
-    margin-right: 59px;
   }
 }
 
