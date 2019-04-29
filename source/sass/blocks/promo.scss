@@ -163,6 +163,8 @@
   background-color: #ececec;
 
   @media (min-width: 768px) {
+    width: 100%;
+    height: auto;
     position: absolute;
     right: 0;
     bottom: 0;
