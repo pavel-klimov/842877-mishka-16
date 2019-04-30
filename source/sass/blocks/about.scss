@@ -1,5 +1,15 @@
-.about {
+.about__wraper {
   padding: 27px 30px 35px;
+
+  @media (min-width: 768px) {
+    padding: 49px 50px 35px;
+  }
+
+  @media (min-width: 1150px) {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 59px 0 42px;
+  }
 }
 
 .about__title {
@@ -9,12 +19,29 @@
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
+
+  @media (min-width: 768px) {
+    margin-left: -4px;
+    padding-bottom: 40px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 1150px) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .about__points {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .about__item {
@@ -26,6 +53,26 @@
   font-weight: 700;
   line-height: 20px;
   background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 63px 0 48px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.about__item:nth-child(3n + 2) {
+  @media (min-width: 768px) {
+    order: 1;
+  }
+}
+
+.about__item:nth-child(3n) {
+  @media (min-width: 768px) {
+    order: 2;
+  }
 }
 
 .about__item--eco {

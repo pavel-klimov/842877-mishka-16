@@ -1,9 +1,60 @@
 .menu {
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.menu--main-group {
+  @media (min-width: 768px) and (max-width: 1149px) {
+    max-width: 60%;
+    position: absolute;
+    left: 29px;
+    bottom: 0;
+    transform: translateY(100%);
+  }
+
+  @media (min-width: 1150px) {
+    order: -1;
+  }
+}
+
+.menu.menu--extra-group {
+  display: none;
+
+  @media (min-width: 1150px) {
+    display: flex;
+    max-width: 60%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+  }
+}
+
+.menu__item {
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  @media (min-width: 768px) {
+    box-shadow: -1px 0 0 #ececec;
+  }
+}
+
+.menu--main-group .menu__item {
+  @media (min-width: 768px) and (max-width: 1149px) {
+    box-shadow: none;
+  }
+}
+
+.menu--main-group .menu__item:first-child {
+  @media (min-width: 1150px) {
+    box-shadow: none;
+  }
+}
+
+.menu--extra-group .menu__item {
+  @media (min-width: 1150px) {
+    box-shadow: none;
+  }
 }
 
 .menu__link {
@@ -12,7 +63,6 @@
   align-items: center;
   height: 79px;
   padding-left: 75px;
-  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   color: #000000;
   font-size: 17px;
   font-weight: 700;
@@ -27,10 +77,68 @@
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
+
+  @media (min-width: 768px) {
+    height: 88px;
+    padding: 0 35px;
+  }
+}
+
+.menu__link:hover .menu__link-icon,
+.menu__link:focus .menu__link-icon {
+  opacity: 1;
+  fill: #63d1bb;
+}
+
+.menu__link:active .menu__link-icon {
+  opacity: 0.3;
+  fill: #63d1bb;
+}
+
+.menu--main-group .menu__link {
+  @media (min-width: 768px) and (max-width: 1149px) {
+    height: auto;
+    padding: 0;
+    margin: 18px 17px 0 20px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.menu--extra-group .menu__link {
+  @media (min-width: 1150px) {
+    height: auto;
+    padding: 0;
+    margin: 18px 10px 0 52px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.menu__link--search span {
+  @media (min-width: 768px) {
+    @include visually-hidden();
+  }
 }
 
 .menu__link-icon {
+  min-width: 18px;
   position: absolute;
   margin-left: -44px;
+  fill: #000000;
   opacity: 0.2;
+
+  @media (min-width: 768px) {
+    position: static;
+    margin-left: -35px;
+    padding: 0 32px;
+  }
+}
+
+.menu__link--search .menu__link-icon {
+  @media (min-width: 768px) {
+    margin-right: -35px;
+  }
 }

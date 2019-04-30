@@ -1,28 +1,66 @@
 .header {
   position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 0 #ececec;
+}
+
+.header__wraper {
+  position: relative;
 }
 
 .header__logo {
   display: flex;
-  justify-content: center;
   min-height: 79px;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  margin-left: -2px;
+
+  @media (min-width: 768px) {
+    padding: 0 35px;
+    box-shadow: none;
+    margin-bottom: -6px;
+  }
+
+  @media (min-width: 1150px) {
+    margin-right: 59px;
+  }
 }
 
 .header__logo-link {
-  &:hover {
+  display: flex;
+  margin: auto;
+
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
-  &:focus {
+  &:active {
     opacity: 0.3;
   }
 }
 
 .header__logo-image {
-  display: flex;
-  padding: 22px;
-  margin-left: -2px;
+  width: 86px;
+  height: 35px;
+
+  @media (min-width: 768px) {
+    width: 113px;
+    height: 46px;
+  }
+
+  @media (min-width: 1150px) {
+    width: 149px;
+    height: 72px;
+  }
+}
+
+.header__menu {
+  @media (min-width: 768px) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
 }
 
 .header__menu-button {
@@ -39,15 +77,19 @@
   background-repeat: no-repeat;
   background-size: 21px;
   background-position: center;
-}
 
-.header__menu {
-  display: none;
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .header__menu--no-js,
 .header__menu--open {
   display: block;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .header__menu-button--no-js {
@@ -56,4 +98,36 @@
 
 .header__menu-button--open {
   background-image: url("../img/icon-menu-close.svg");
+}
+
+.header__menu-group {
+  display: none;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.header__menu--open .header__menu-group {
+  display: flex;
+}
+
+.header__promo {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    max-width: calc(40% - 60px);
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    transform: translateY(100%);
+    padding-top: 18px;
+    color: #444444;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
 }

@@ -1,0 +1,24 @@
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin psevdo-line-element() {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: contain;
+}
