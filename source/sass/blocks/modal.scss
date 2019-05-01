@@ -1,0 +1,117 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modal--hidden {
+  display: none;
+}
+
+.modal__wraper {
+  max-width: 568px;
+  width: 100%;
+  min-height: 338px;
+  box-sizing: border-box;
+  padding: 30px 29px 46px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 1px solid #c6c6c6;
+
+  @media (min-width: 768px) {
+    padding-top: 33px;
+  }
+}
+
+.modal__inner {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.modal__title {
+  margin: 0;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #000000;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    margin: 0 -5px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -7px;
+}
+
+.modal__desc {
+  width: 100%;
+  margin: 0 7px 0 0;
+  padding: 0 0 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+
+  @media (min-width: 768px) {
+    padding: 2px 0 13px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.modal__field-radio-button {
+  @include visually-hidden();
+}
+
+.modal__field-radio-button:checked + .modal__field-label {
+  border: 2px solid #63d1bb;
+}
+
+.modal__field-radio-button:focus + .modal__field-label {
+  background-color: rgba(68, 68, 68, 0.1);
+}
+
+.modal__field-label {
+  flex: 1;
+  margin: 8px 7px 15px 0;
+  padding: 16px 0;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+}
+
+.modal__button {
+  width: 100%;
+  padding: 18px 0;
+  margin: 16px 7px 0 0;
+  border: none;
+  background-color: #63d1bb;
+  color: #ffffff;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}

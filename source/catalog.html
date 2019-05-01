@@ -115,7 +115,7 @@
               </div>
               <div class="catalog-item__for-buy">
                 <p class="catalog-item__price">1 200 руб.</p>
-                <button class="catalog-item__buy-button" aria-label="Добавить в корзину">
+                <button class="catalog-item__buy-button js-modal" aria-label="Добавить в корзину">
                   <svg class="catalog-item__buy-button-image" width="20.3" height="18.8"><use xlink:href="#icon-cart"></use></svg>
                 </button>
               </div>
@@ -138,7 +138,7 @@
               </div>
               <div class="catalog-item__for-buy">
                 <p class="catalog-item__price">690 руб.</p>
-                <button class="catalog-item__buy-button" aria-label="Добавить в корзину">
+                <button class="catalog-item__buy-button js-modal" aria-label="Добавить в корзину">
                   <svg class="catalog-item__buy-button-image" width="20.3" height="18.8"><use xlink:href="#icon-cart"></use></svg>
                 </button>
               </div>
@@ -161,7 +161,7 @@
               </div>
               <div class="catalog-item__for-buy">
                 <p class="catalog-item__price">1 500 руб.</p>
-                <button class="catalog-item__buy-button" aria-label="Добавить в корзину">
+                <button class="catalog-item__buy-button js-modal" aria-label="Добавить в корзину">
                   <svg class="catalog-item__buy-button-image" width="20.3" height="18.8"><use xlink:href="#icon-cart"></use></svg>
                 </button>
               </div>
@@ -194,19 +194,20 @@
         </a>
       </div>
     </footer>
-    <script>
-      var menuNoJSClass = 'header__menu--no-js';
-      var menuButtonNoJSClass = 'header__menu-button--no-js';
-      var menuOpenClass = 'header__menu--open';
-      var menuOpenButtonClass = 'header__menu-button--open';
-      var menuElement = document.querySelector('.' + menuNoJSClass);
-      menuElement.classList.remove(menuNoJSClass);
-      var menuButtonElement = document.querySelector('.' + menuButtonNoJSClass);
-      menuButtonElement.classList.remove(menuButtonNoJSClass);
-      menuButtonElement.addEventListener('click', function() {
-        menuElement.classList.toggle(menuOpenClass);
-        menuButtonElement.classList.toggle(menuOpenButtonClass);
-      })
-    </script>
+    <div class="modal modal--hidden" tabindex="-1">
+      <div class="modal__wraper">
+        <div class="modal__inner">
+          <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+          <form class="modal__form">
+            <p class="modal__desc">Выберите размер:</p>
+            <input class="modal__field-radio-button" id="modal-size-s" name="size" type="radio" value="s" checked><label class="modal__field-label" for="modal-size-s">S</label>
+            <input class="modal__field-radio-button" id="modal-size-m" name="size" type="radio" value="m"><label class="modal__field-label" for="modal-size-m">M</label>
+            <input class="modal__field-radio-button" id="modal-size-l" name="size" type="radio" value="l"><label class="modal__field-label" for="modal-size-l">L</label>
+            <button class="modal__button">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
