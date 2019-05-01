@@ -27,19 +27,6 @@
   var actionButtons = document.querySelectorAll('.' + BINDING_CLASS);
 
   var lastActionElement;
-  var lastFocusedElement;
-
-  // Util
-  var isDescendant = function (parent, child) {
-    var node = child.parentNode;
-    while (node != null) {
-        if (node == parent) {
-            return true;
-        }
-        node = node.parentNode;
-    }
-    return false;
-  }
 
   var onModalOpenEscButtonPress = function (evt) {
     if (evt.keyCode === ESC_KEYCODE) {
@@ -47,32 +34,15 @@
     }
   };
 
-  var onModalBlur = function(evt) {
-    evt.target.removeEventListener('blur', onModalBlur);
-    if (isDescendant(modal, evt.relatedTarget)) {
-      lastFocusedElement = evt.relatedTarget;
-      evt.relatedTarget.addEventListener('blur', onModalBlur);
-    } else {
-      modal.focus();
-      lastFocusedElement = modal;
-      modal.addEventListener('blur', onModalBlur);
-    }
-  }
-
   var openModal = function() {
     modal.classList.remove(MODAL_HIDDEN_CLASS);
     modal.focus();
-    lastFocusedElement = modal;
     window.addEventListener('keydown', onModalOpenEscButtonPress);
-    modal.addEventListener('blur', onModalBlur);
   };
 
   var closeModal = function() {
     modal.classList.add(MODAL_HIDDEN_CLASS);
     document.removeEventListener('keydown', onModalOpenEscButtonPress);
-    if (lastFocusedElement) {
-      lastFocusedElement.removeEventListener('blur', onModalBlur);
-    }
     if (lastActionElement) {
       lastActionElement.focus();
     }

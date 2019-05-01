@@ -121,19 +121,6 @@
         </a>
       </div>
     </footer>
-    <script>
-      var menuNoJSClass = 'header__menu--no-js';
-      var menuButtonNoJSClass = 'header__menu-button--no-js';
-      var menuOpenClass = 'header__menu--open';
-      var menuOpenButtonClass = 'header__menu-button--open';
-      var menuElement = document.querySelector('.' + menuNoJSClass);
-      menuElement.classList.remove(menuNoJSClass);
-      var menuButtonElement = document.querySelector('.' + menuButtonNoJSClass);
-      menuButtonElement.classList.remove(menuButtonNoJSClass);
-      menuButtonElement.addEventListener('click', function() {
-        menuElement.classList.toggle(menuOpenClass);
-        menuButtonElement.classList.toggle(menuOpenButtonClass);
-      })
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
