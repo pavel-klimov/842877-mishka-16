@@ -115,7 +115,7 @@
               </div>
               <div class="catalog-item__for-buy">
                 <p class="catalog-item__price">1 200 руб.</p>
-                <button class="catalog-item__buy-button" aria-label="Добавить в корзину">
+                <button class="catalog-item__buy-button js-modal" aria-label="Добавить в корзину">
                   <svg class="catalog-item__buy-button-image" width="20.3" height="18.8"><use xlink:href="#icon-cart"></use></svg>
                 </button>
               </div>
@@ -138,7 +138,7 @@
               </div>
               <div class="catalog-item__for-buy">
                 <p class="catalog-item__price">690 руб.</p>
-                <button class="catalog-item__buy-button" aria-label="Добавить в корзину">
+                <button class="catalog-item__buy-button js-modal" aria-label="Добавить в корзину">
                   <svg class="catalog-item__buy-button-image" width="20.3" height="18.8"><use xlink:href="#icon-cart"></use></svg>
                 </button>
               </div>
@@ -161,11 +161,28 @@
               </div>
               <div class="catalog-item__for-buy">
                 <p class="catalog-item__price">1 500 руб.</p>
-                <button class="catalog-item__buy-button" aria-label="Добавить в корзину">
+                <button class="catalog-item__buy-button js-modal" aria-label="Добавить в корзину">
                   <svg class="catalog-item__buy-button-image" width="20.3" height="18.8"><use xlink:href="#icon-cart"></use></svg>
                 </button>
               </div>
             </div>
+          </section>
+        </div>
+      </div>
+      <div class="video">
+        <div class="wraper video__wraper">
+          <section class="video__item">
+            <h2 class="video__title">Процесс производства</h2>
+            <div class="video__content">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"  srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                <img class="video__item-image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x" alt="Вязаная корзинка для белья">
+              </picture>
+              <button class="video__play-button" aria-label="Включить видео"></button>
+            </div>
+            <p class="video__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <button class="button video__button">Сделать заказ</button>
           </section>
         </div>
       </div>
@@ -194,19 +211,20 @@
         </a>
       </div>
     </footer>
-    <script>
-      var menuNoJSClass = 'header__menu--no-js';
-      var menuButtonNoJSClass = 'header__menu-button--no-js';
-      var menuOpenClass = 'header__menu--open';
-      var menuOpenButtonClass = 'header__menu-button--open';
-      var menuElement = document.querySelector('.' + menuNoJSClass);
-      menuElement.classList.remove(menuNoJSClass);
-      var menuButtonElement = document.querySelector('.' + menuButtonNoJSClass);
-      menuButtonElement.classList.remove(menuButtonNoJSClass);
-      menuButtonElement.addEventListener('click', function() {
-        menuElement.classList.toggle(menuOpenClass);
-        menuButtonElement.classList.toggle(menuOpenButtonClass);
-      })
-    </script>
+    <div class="modal modal--hidden" tabindex="-1">
+      <div class="modal__wraper">
+        <div class="modal__inner">
+          <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+          <form class="modal__form">
+            <p class="modal__desc">Выберите размер:</p>
+            <input class="modal__field-radio-button" id="modal-size-s" name="size" type="radio" value="s" checked><label class="modal__field-label" for="modal-size-s">S</label>
+            <input class="modal__field-radio-button" id="modal-size-m" name="size" type="radio" value="m"><label class="modal__field-label" for="modal-size-m">M</label>
+            <input class="modal__field-radio-button" id="modal-size-l" name="size" type="radio" value="l"><label class="modal__field-label" for="modal-size-l">L</label>
+            <button class="modal__button">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

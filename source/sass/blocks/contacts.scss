@@ -156,7 +156,8 @@
 }
 
 .contacts__map {
-  padding-bottom: 38px;
+  position: relative;
+  margin-bottom: 38px;
 
   @media (min-width: 768px) {
     padding-bottom: 51px;
@@ -174,6 +175,17 @@
 .contacts__map-image {
   width: 100%;
   height: auto;
+}
+
+.contacts__map-frame {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
 }
 
 .contacts__button {

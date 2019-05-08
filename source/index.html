@@ -133,7 +133,7 @@
               <img class="promo__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 1x, img/triple-set-mobile@2x.jpg 2x" alt="Три вязаные корзинки">
             </picture>
             <p class="promo__price">Цена: 990 руб.</p>
-            <button class="button" type="button">Заказать</button>
+            <button class="button js-modal" type="button">Заказать</button>
           </div>
         </div>
       </section>
@@ -204,6 +204,7 @@
             <source media="(min-width: 768px)"  srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </picture>
+          <div class="contacts__map-frame" id="google-map"></div>
         </div>
         <div class="wraper contacts__wraper contacts__wraper--bottom">
           <button class="button contacts__button" type="button">Напишите нам</button>
@@ -234,19 +235,36 @@
         </a>
       </div>
     </footer>
-    <script>
-      var menuNoJSClass = 'header__menu--no-js';
-      var menuButtonNoJSClass = 'header__menu-button--no-js';
-      var menuOpenClass = 'header__menu--open';
-      var menuOpenButtonClass = 'header__menu-button--open';
-      var menuElement = document.querySelector('.' + menuNoJSClass);
-      menuElement.classList.remove(menuNoJSClass);
-      var menuButtonElement = document.querySelector('.' + menuButtonNoJSClass);
-      menuButtonElement.classList.remove(menuButtonNoJSClass);
-      menuButtonElement.addEventListener('click', function() {
-        menuElement.classList.toggle(menuOpenClass);
-        menuButtonElement.classList.toggle(menuOpenButtonClass);
-      })
-    </script>
+    <div class="modal modal--hidden" tabindex="-1">
+      <div class="modal__wraper">
+        <div class="modal__inner">
+          <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+          <form class="modal__form">
+            <p class="modal__desc">Выберите размер:</p>
+            <input class="modal__field-radio-button" id="modal-size-s" name="size" type="radio" value="s" checked><label class="modal__field-label" for="modal-size-s">S</label>
+            <input class="modal__field-radio-button" id="modal-size-m" name="size" type="radio" value="m"><label class="modal__field-label" for="modal-size-m">M</label>
+            <input class="modal__field-radio-button" id="modal-size-l" name="size" type="radio" value="l"><label class="modal__field-label" for="modal-size-l">L</label>
+            <button class="modal__button">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    function initMap() {
+      var address = {lat: 59.938754, lng: 30.323063};
+      var iconBase = location.origin;
+      var icons = {
+          marker: {
+            url: iconBase + '/img/icon-map-pin.svg',
+            size: new google.maps.Size(67, 100),
+          }
+        };
+      var map = new google.maps.Map(
+          document.getElementById('google-map'), {zoom: 17, center: address});
+      var marker = new google.maps.Marker({position: address, icon: icons.marker, map: map});
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUQnGQLfz0m1CquLDueLi04wcgvooXyE0&callback=initMap"></script>
+  <script src="js/main.js"></script>
 </html>

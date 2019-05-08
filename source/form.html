@@ -96,6 +96,44 @@
           <h1 class="intro__title">Вязание на заказ</h1>
         </div>
       </div>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="order-form__group">
+          <p class="wraper order-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        </div>
+        <div class="order-form__group">
+          <fieldset class="wraper order-form__wraper">
+            <legend class="order-form__legend">Тип</legend>
+            <input class="order-form__field" id="type-1" name="type" type="radio" value="type-1" checked><label class="order-form__field-label" for="type-1">Аксессуар для интерьера</label>
+            <input class="order-form__field" id="type-2" name="type" type="radio" value="type-2"><label class="order-form__field-label" for="type-2">Детская игрушка</label>
+          </fieldset>
+        </div>
+        <div class="order-form__group">
+          <fieldset class="wraper order-form__wraper order-form__wraper--color-group">
+            <legend class="order-form__legend">Цвет</legend>
+            <input class="order-form__field" id="color-1" name="color" type="checkbox" value="white" checked><label class="order-form__field-label" for="color-1">Белый</label>
+            <input class="order-form__field" id="color-2" name="color" type="checkbox" value="grey" checked><label class="order-form__field-label" for="color-2">Серый</label>
+            <input class="order-form__field" id="color-3" name="color" type="checkbox" value="tiffany"><label class="order-form__field-label" for="color-3">«Тиффани»</label>
+            <input class="order-form__field" id="color-4" name="color" type="checkbox" value="black"><label class="order-form__field-label" for="color-4">Черный</label>
+            <input class="order-form__field" id="color-5" name="color" type="checkbox" value="pink"><label class="order-form__field-label" for="color-5">Розовый</label>
+            <input class="order-form__field" id="color-6" name="color" type="checkbox" value="orange"><label class="order-form__field-label" for="color-6">Оранжевый</label>
+          </fieldset>
+        </div>
+        <div class="order-form__group">
+          <fieldset class="wraper order-form__wraper order-form__wraper--fio-group">
+            <legend class="order-form__legend">ФИО</legend>
+            <label class="order-form__field-label">Имя: <input class="order-form__text-field" name="fio-name" type="text" placeholder="Введите ваше имя*"></label>
+            <label class="order-form__field-label">Фамилия: <input class="order-form__text-field" name="fio-surname" type="text" placeholder="Укажите фамилию*"></label>
+            <label class="order-form__field-label">Отчество: <input class="order-form__text-field" name="fio-middle-name" type="text" placeholder="Отчество, если желаете"></label>
+          </fieldset>
+        </div>
+        <div class="order-form__group">
+          <fieldset class="wraper order-form__wraper">
+            <legend class="order-form__legend">Доп</legend>
+            <textarea placeholder="Опишите все ваши пожелания к заказу" name="extra" aria-label="Пожелания к заказу"></textarea>
+            <button class="button">Отправить заказ</button>
+          </fieldset>
+        </div>
+      </form>
     </main>
     <footer class="footer">
       <div class="wraper footer__wraper">
@@ -121,19 +159,6 @@
         </a>
       </div>
     </footer>
-    <script>
-      var menuNoJSClass = 'header__menu--no-js';
-      var menuButtonNoJSClass = 'header__menu-button--no-js';
-      var menuOpenClass = 'header__menu--open';
-      var menuOpenButtonClass = 'header__menu-button--open';
-      var menuElement = document.querySelector('.' + menuNoJSClass);
-      menuElement.classList.remove(menuNoJSClass);
-      var menuButtonElement = document.querySelector('.' + menuButtonNoJSClass);
-      menuButtonElement.classList.remove(menuButtonNoJSClass);
-      menuButtonElement.addEventListener('click', function() {
-        menuElement.classList.toggle(menuOpenClass);
-        menuButtonElement.classList.toggle(menuOpenButtonClass);
-      })
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
