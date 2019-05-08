@@ -1,13 +1,13 @@
 .order-form__wraper {
   position: relative;
-  padding: 7px 30px 32px;;
+  padding: 7px 30px 32px;
   border: none;
 
   &:first-child {
     content: none;
   }
 
-  &:before {
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -70,24 +70,23 @@
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
-
 }
 
 .order-form__field {
   @include visually-hidden();
 }
 
-.order-form__field[type=radio] + .order-form__field-label,
-.order-form__field[type=checkbox] + .order-form__field-label {
+.order-form__field[type="radio"] + .order-form__field-label,
+.order-form__field[type="checkbox"] + .order-form__field-label {
   position: relative;
   padding-left: 63px;
 }
 
-.order-form__field[type=checkbox] + .order-form__field-label {
+.order-form__field[type="checkbox"] + .order-form__field-label {
   margin: -8px 0 27px 2px;
 }
 
-.order-form__field[type=radio] + .order-form__field-label:before {
+.order-form__field[type="radio"] + .order-form__field-label::before {
   content: "";
   display: block;
   position: absolute;
@@ -98,22 +97,21 @@
   box-shadow: 0 0 0 10px #ffffff, 0 0 0 12px #444444;
   background-color: #ffffff;
   border-radius: 20px;
-
 }
 
-.order-form__field[type=radio] + .order-form__field-label:hover:before {
+.order-form__field[type="radio"] + .order-form__field-label:hover::before {
   box-shadow: 0 0 0 10px #ffffff, 0 0 0 12px #62d1ba;
 }
 
-.order-form__field[type=radio] + .order-form__field-label:active:before {
+.order-form__field[type="radio"] + .order-form__field-label:active::before {
   box-shadow: 0 0 0 10px #ffffff, 0 0 0 12px rgba(68, 68, 68, 0.3);
 }
 
-.order-form__field[type=radio]:checked + .order-form__field-label:before {
+.order-form__field[type="radio"]:checked + .order-form__field-label::before {
   background-color: #62d1ba;
 }
 
-.order-form__field[type=checkbox] + .order-form__field-label:before {
+.order-form__field[type="checkbox"] + .order-form__field-label::before {
   content: "";
   display: block;
   position: absolute;
@@ -122,19 +120,18 @@
   top: 3px;
   left: 0;
   box-shadow: 0 0 0 2px #444444;
-
 }
 
-.order-form__field[type=checkbox] + .order-form__field-label:hover:before {
+.order-form__field[type="checkbox"] + .order-form__field-label:hover::before {
   box-shadow: 0 0 0 2px #62d1ba;
 }
 
-.order-form__field[type=checkbox] + .order-form__field-label:active:before {
+.order-form__field[type="checkbox"] + .order-form__field-label:active::before {
   box-shadow: 0 0 0 2px rgba(68, 68, 68, 0.3);
 }
 
-.order-form__field[type=checkbox]:checked + .order-form__field-label:before {
-  background-image: url("../../img/icon-tick.svg");
+.order-form__field[type="checkbox"]:checked + .order-form__field-label::before {
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 22px 16px;
