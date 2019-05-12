@@ -49,6 +49,7 @@
   }
 
   var onActionClick = function(evt) {
+    evt.preventDefault();
     lastActionElement = evt.target;
     openModal();
   }

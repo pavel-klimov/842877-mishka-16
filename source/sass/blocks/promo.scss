@@ -5,7 +5,7 @@
     @include psevdo-line-element();
     height: 6px;
     bottom: 0;
-    background-image: url("../img/bg-zigzag-line.svg");
+    background-image: url("../img/style/bg-zigzag-line.svg");
 
     @media (min-width: 768px) {
       height: 17px;
