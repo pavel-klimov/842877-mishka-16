@@ -48,8 +48,18 @@
 }
 
 .catalog-item__link-title {
+  display: block;
   color: #000000;
   text-decoration: none;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-item__title {
@@ -109,7 +119,7 @@
 
 .catalog-item__buy-button {
   position: absolute;
-  right: -8px;
+  right: -1px;
   bottom: 0;
   border: none;
   background: none;

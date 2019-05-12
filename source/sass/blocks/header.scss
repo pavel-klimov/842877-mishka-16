@@ -83,15 +83,6 @@
   }
 }
 
-.header__menu--no-js,
-.header__menu--open {
-  display: block;
-
-  @media (min-width: 768px) {
-    display: flex;
-  }
-}
-
 .header__menu-button--no-js {
   display: none;
 }
@@ -110,6 +101,7 @@
   }
 }
 
+.header__menu--no-js .header__menu-group,
 .header__menu--open .header__menu-group {
   display: flex;
 }
