@@ -5,7 +5,7 @@
     @include psevdo-line-element();
     height: 6px;
     bottom: 0;
-    background-image: url("../img/bg-zigzag-line.svg");
+    background-image: url("../img/style/bg-zigzag-line.svg");
 
     @media (min-width: 768px) {
       height: 17px;
@@ -28,7 +28,7 @@
   @media (min-width: 768px) {
     position: relative;
     padding: 77px 45px 102px;
-    background-image: url("../img/review@1x.jpg");
+    background-image: url("../img/style/review@1x.jpg");
     background-position-x: 0;
     background-position-y: top;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@
   }
 
   @media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
-    background-image: url("../img/review@2x.jpg");
+    background-image: url("../img/style/review@2x.jpg");
   }
 
   @media (min-width: 1150px) {
@@ -184,11 +184,11 @@
 }
 
 .feedback__slider-button--back::after {
-  background-image: url("../img/icon-left-arrow.svg");
+  background-image: url("../img/style/icon-left-arrow.svg");
 }
 
 .feedback__slider-button--next::after {
-  background-image: url("../img/icon-right-arrow.svg");
+  background-image: url("../img/style/icon-right-arrow.svg");
 }
 
 .feedback__button {
