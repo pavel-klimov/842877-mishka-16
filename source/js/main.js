@@ -66,6 +66,7 @@
       }
     });
 
+    actionButtons = [].slice.call(actionButtons);
     actionButtons.forEach(function(item) {
       item.addEventListener('click', onActionClick);
     });
