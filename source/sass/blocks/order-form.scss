@@ -1,5 +1,15 @@
 .order-form__wraper {
   padding: 0 30px 33px;
+
+  @media (min-width: 768px) {
+    position: relative;
+  }
+}
+
+.order-form__wraper--type-group {
+  @media (min-width: 768px) {
+    padding-bottom: 39px;
+  }
 }
 
 .order-form__wraper--color-group {
@@ -36,6 +46,7 @@
   line-height: 24px;
 
   @media (min-width: 768px) {
+    padding: 47px 50px 44px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -68,6 +79,12 @@
       content: none;
     }
   }
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+  }
 }
 
 .order-form__legend--color-group {
@@ -86,6 +103,10 @@
 .order-form__field[type="checkbox"] + .order-form__field-label {
   position: relative;
   padding-left: 63px;
+
+  @media (min-width: 768px) {
+    padding-left: 77px;
+  }
 }
 
 .order-form__field[type="checkbox"] + .order-form__field-label {
@@ -103,15 +124,30 @@
   box-shadow: 0 0 0 10px #ffffff, 0 0 0 12px #444444;
   background-color: #ffffff;
   border-radius: 20px;
+
+  @media (min-width: 768px) {
+    width: 22px;
+    height: 22px;
+    top: 28px;
+    box-shadow: 0 0 0 13px #ffffff, 0 0 0 15px #444444;
+  }
 }
 
 .order-form__field[type="radio"]:focus + .order-form__field-label::before,
 .order-form__field[type="radio"]:hover + .order-form__field-label::before {
   box-shadow: 0 0 0 10px #ffffff, 0 0 0 12px #62d1ba;
+
+  @media (min-width: 768px) {
+    box-shadow: 0 0 0 13px #ffffff, 0 0 0 15px #62d1ba;
+  }
 }
 
 .order-form__field[type="radio"]:active + .order-form__field-label::before {
   box-shadow: 0 0 0 10px #ffffff, 0 0 0 12px rgba(68, 68, 68, 0.3);
+
+  @media (min-width: 768px) {
+    box-shadow: 0 0 0 13px #ffffff, 0 0 0 15px rgba(68, 68, 68, 0.3);
+  }
 }
 
 .order-form__field[type="radio"]:checked + .order-form__field-label::before {
@@ -152,6 +188,17 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
+
+  @media (min-width: 768px) {
+    padding: 29px 0;
+    font-size: 19px;
+  }
+}
+
+.order-form__wraper--type-group .order-form__field-label {
+  @media (min-width: 768px) {
+    margin-left: 190px;
+  }
 }
 
 .order-form__field-label--fio-text {
