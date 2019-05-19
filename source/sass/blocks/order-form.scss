@@ -140,8 +140,10 @@
   margin: -7px 0 26px 0;
 
   @media (min-width: 768px) {
-    width: 200px;
-    box-sizing: border-box;
+    flex-basis: 120px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    //box-sizing: border-box;
     padding-top: 12px;
     padding-bottom: 12px;
     margin-bottom: 41px;
@@ -193,15 +195,17 @@
 
 .order-form__field-text-wraper {
   position: relative;
+  display: flex;
 }
 
 .order-form__field-text {
   display: block;
   width: 100%;
+  height: 18px;
   padding: 14px 0 18px;
+  margin: 0;
   border: none;
   background: none;
-  box-sizing: border-box;
   box-shadow: inset 0 -2px 0 #000000;
   color: #444444;
   font: inherit;
@@ -212,6 +216,9 @@
   &::placeholder {
     color: #444444;
     opacity: 0.3;
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box;
   }
 
   &:hover,
@@ -221,10 +228,16 @@
   }
 
   @media (min-width: 768px) {
+    width: auto;
+    flex-grow: 1;
     margin-bottom: 4px;
     padding-left: 17px;
-    padding-bottom: 14px;
+    padding-bottom: 17px;
     font-size: 19px;
+
+    &::placeholder {
+      font-size: 19px;
+    }
   }
 }
 
@@ -236,6 +249,11 @@
 .order-form__field-text[type="tel"] {
   font-size: 19px;
   padding-bottom: 16px;
+  overflow: hidden;
+
+  &::placeholder {
+    font-size: 19px;
+  }
 }
 
 .order-form__field-icon {
@@ -245,7 +263,7 @@
 
   @media (min-width: 768px) {
     right: 22px;
-    bottom: 5px;
+    bottom: 9px;
   }
 
   @media (min-width: 1150px) {
@@ -266,10 +284,13 @@
 
 .order-form__extra-text {
   width: 100%;
+  max-height: 142px;
+  border: none;
   box-sizing: border-box;
-  border: 2px solid #000000;
-  padding: 14px 17px 16px;
-  margin-bottom: 12px;
+  box-shadow: inset 0 0 0 2px #444444;
+  padding: 16px 17px 18px;
+  margin: 0 0 12px;
+  overflow: hidden;
   font: inherit;
   color: #444444;
   font-size: 17px;
@@ -279,16 +300,23 @@
 
   &::placeholder {
     opacity: 0.3;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18px;
   }
 
   &:hover,
   &:focus {
-    border-color: #62d1ba;
+    box-shadow: inset 0 0 0 2px #62d1ba;
     outline: none;
   }
 
   @media (min-width: 768px) {
     font-size: 19px;
+
+    &::placeholder {
+      font-size: 19px;
+    }
   }
 }
 
@@ -302,7 +330,7 @@
   @media (min-width: 768px) {
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -311,6 +339,7 @@
 
   @media (min-width: 768px) {
     width: 230px;
+    margin-bottom: 0;
   }
 }
 
@@ -393,8 +422,8 @@
   padding-bottom: 21px;
 
   @media (min-width: 768px) {
-    padding-top: 39px;
-    padding-bottom: 37px;
+    padding-top: 41px;
+    padding-bottom: 35px;
   }
 }
 
@@ -410,7 +439,7 @@
   @media (min-width: 768px) {
     display: flex;
     align-items: baseline;
-    padding: 9px 0;
+    padding: 12px 0 11px;
   }
 }
 
@@ -418,13 +447,13 @@
   padding-bottom: 28px;
 
   @media (min-width: 768px) {
-    padding-top: 46px;
-    padding-bottom: 0;
+    padding-top: 54px;
+    padding-bottom: 9px;
   }
 }
 
 .order-form__legend--tel {
-  padding-bottom: 2px;
+  padding-bottom: 10px;
 
   &::after {
     margin-left: 30px;
@@ -437,6 +466,7 @@
 
   @media (min-width: 768px) {
     right: 26px;
+    bottom: 17px;
   }
 
   @media (min-width: 1150px) {
@@ -449,7 +479,7 @@
   padding-bottom: 34px;
 
   @media (min-width: 768px) {
-    padding-top: 18px;
+    padding-top: 14px;
     padding-bottom: 46px;
   }
 }
@@ -462,11 +492,11 @@
   }
 
   @media (min-width: 768px) {
-    top: 38px;
+    top: 29px;
   }
 
   @media (min-width: 1150px) {
-    top: 40px;
+    top: 31px;
   }
 }
 
@@ -502,7 +532,7 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: 1150px) {

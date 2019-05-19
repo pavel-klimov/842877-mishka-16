@@ -32,8 +32,8 @@
     "start": "gulp start"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE 11",
+    "last 2 version",
+    "not IE 10",
     "Firefox ESR"
   ],
   "editorconfig-cli": [

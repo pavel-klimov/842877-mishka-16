@@ -67,11 +67,22 @@
 }
 
 .feedback__slider {
+  overflow: hidden;
   padding-bottom: 30px;
 
   @media (min-width: 768px) {
     padding-left: 4px;
   }
+}
+
+.feedback__slider-content {
+  display: flex;
+}
+
+.feedback__item {
+  width: 100%;
+  flex-shrink: 0;
+  padding-right: 20px;
 }
 
 .feedback__text {
@@ -157,6 +168,10 @@
   box-shadow: 0 1px 0 #ececec, 0 -1px 0 #ececec, 1px 0 0 #ececec, inset 1px 0 0 #ececec;
   background: none;
 
+  &:focus {
+    outline: none;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -192,11 +207,14 @@
 }
 
 .feedback__button {
+  font-size: 18px;
+
   @media (min-width: 768px) {
     position: absolute;
     top: 79px;
     right: 50px;
     width: auto;
     min-width: 175px;
+    font-size: 17px;
   }
 }
