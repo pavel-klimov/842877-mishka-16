@@ -152,6 +152,10 @@
     margin-top: -5px;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover::after,
   &:focus::after {
     opacity: 0.7;

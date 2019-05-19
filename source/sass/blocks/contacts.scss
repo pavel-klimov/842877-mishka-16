@@ -160,7 +160,7 @@
   margin-bottom: 38px;
 
   @media (min-width: 768px) {
-    padding-bottom: 51px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: 1150px) {
@@ -189,9 +189,12 @@
 }
 
 .contacts__button {
+  font-size: 18px;
+
   @media (min-width: 768px) {
     width: 230px;
     margin: 0 auto 18px;
+    font-size: 17px;
   }
 
   @media (min-width: 1150px) {

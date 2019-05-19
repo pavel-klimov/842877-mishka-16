@@ -108,10 +108,10 @@
             </table>
             <picture>
               <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.webp 1x, img/content/triple-set-desktop@1x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)"  srcset="img/content/triple-set-tablet@1x.webp 1x, img/content/triple-set-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.webp 1x, img/content/triple-set-tablet@2x.webp 2x" type="image/webp">
               <source srcset="img/content/triple-set-mobile@1x.webp 1x, img/content/triple-set-mobile@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@1x.jpg 2x" type="image/jpeg">
-              <source media="(min-width: 768px)"  srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x" type="image/jpeg">
+              <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x" type="image/jpeg">
               <img class="promo__image" src="img/content/triple-set-mobile@1x.jpg" srcset="img/content/triple-set-mobile@1x.jpg 1x, img/content/triple-set-mobile@2x.jpg 2x" alt="Три вязаные корзинки">
             </picture>
             <p class="promo__price">Цена: 990 руб.</p>
@@ -148,13 +148,24 @@
         <div class="wraper feedback__wraper">
           <h2 class="feedback__title">Отзывы</h2>
           <div class="feedback__slider">
-            <div class="feedback__item">
-              <p class="feedback__text">
-                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
-              <div class="feedback__author">
-                <p class="feedback__author-name">Анастасия Красильникова</p>
-                <p class="feedback__author-nickname">@misssssiskras</p>
+            <div class="feedback__slider-content">
+              <div class="feedback__item">
+                <p class="feedback__text">
+                    Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
+                <div class="feedback__author">
+                  <p class="feedback__author-name">Анастасия Красильникова</p>
+                  <p class="feedback__author-nickname">@misssssiskras</p>
+                </div>
+              </div>
+              <div class="feedback__item">
+                <p class="feedback__text">
+                    Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
+                <div class="feedback__author">
+                  <p class="feedback__author-name">Анастасия Красильникова</p>
+                  <p class="feedback__author-nickname">@misssssiskras</p>
+                </div>
               </div>
             </div>
           </div>
@@ -183,10 +194,10 @@
         <div class="contacts__map">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.webp 1x, img/content/map-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 768px)"  srcset="img/content/map-tablet@1x.webp 1x, img/content/map-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/content/map-tablet@1x.webp 1x, img/content/map-tablet@2x.webp 2x" type="image/webp">
             <source srcset="img/content/map-mobile@1x.webp 1x, img/content/map-mobile@2x.webp 2x" type="image/webp">
             <source media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.jpg 1x, img/content/map-desktop@2x.jpg 2x" type="image/jpeg">
-            <source media="(min-width: 768px)"  srcset="img/content/map-tablet@1x.jpg 1x, img/content/map-tablet@2x.jpg 2x" type="image/jpeg">
+            <source media="(min-width: 768px)" srcset="img/content/map-tablet@1x.jpg 1x, img/content/map-tablet@2x.jpg 2x" type="image/jpeg">
             <img class="contacts__map-image" src="img/content/map-mobile@1x.jpg" srcset="img/content/map-mobile@1x.jpg 1x, img/content/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </picture>
           <div class="contacts__map-frame" id="google-map"></div>
@@ -237,15 +248,14 @@
     <script>
       function initMap() {
         var address = {lat: 59.938754, lng: 30.323063};
-        var iconBase = location.href;
         var icons = {
             marker: {
-              url: iconBase + 'img/content/icon-map-pin.svg',
+              url: "img/content/icon-map-pin.svg",
               size: new google.maps.Size(67, 100),
             }
           };
         var map = new google.maps.Map(
-            document.getElementById('google-map'), {zoom: 17, center: address});
+            document.getElementById("google-map"), {zoom: 17, center: address});
         var marker = new google.maps.Marker({position: address, icon: icons.marker, map: map});
       }
     </script>

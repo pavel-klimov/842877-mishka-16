@@ -1,6 +1,10 @@
 .catalog__wraper {
   padding-top: 15px;
 
+  @media (min-width: 768px) {
+    padding: 15px 50px 0;
+  }
+
   @media (min-width: 1150px) {
     display: flex;
     justify-content: space-between;
